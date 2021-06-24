@@ -2,5 +2,5 @@
 A simple program which calculates Truth Table values
 
 
-#Features
+# Features
 Currently it only calculates AND and OR.
