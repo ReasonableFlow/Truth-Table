@@ -13,14 +13,14 @@ int resultNum(string choice, int first, int second) {
 
 
 
-	if (choice == "AND") {
+	if (choice == "and") {
 
 		return first * second ;
 
 	}
-	else if (choice == "OR") {
+	else if (choice == "or") {
 
-		if (first == 1 && second == 0 || first == 0 && second == 1) {
+		if ((first == 1 && second == 1)) {
 
 			return 1;
 		}
@@ -35,6 +35,33 @@ int resultNum(string choice, int first, int second) {
 
 }
 
+string trim(string input) {
+
+	stringstream ss;
+
+
+	for (int i = 0; i < input.size(); i++) {
+
+		input[i] = tolower(input[i]);
+	}
+
+
+	for (int x = 0; x < (int)input.size(); x++) {
+
+		if (isalpha(input[x])) {
+
+			ss << input[x];
+		}
+	}
+
+	if (ss.str().length() > 0) {
+		return ss.str();
+	}
+	else {
+		return "";
+	}
+
+}
 
 bool isValid(int num1, int num2) {
 
@@ -111,8 +138,10 @@ int main() {
 
 	cout << "\nWhat logical operator is the table: " ;
 	cin >> choice;
+
 	
-	getNums(myList, amount,choice);
+	
+	getNums(myList, amount, trim(choice));
 
 
 	return 0;
