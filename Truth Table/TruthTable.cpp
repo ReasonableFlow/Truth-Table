@@ -15,7 +15,7 @@ int resultNum(string choice, int first, int second) {
 
 	if (choice == "and") {
 
-		return first * second ;
+		return first AND second ;
 
 	}
 	else if (choice == "or") {
@@ -26,7 +26,7 @@ int resultNum(string choice, int first, int second) {
 		}
 		else {
 
-			return first + second;
+			return first OR second;
 		}
 	}
 
