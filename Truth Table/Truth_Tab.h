@@ -10,6 +10,7 @@ private:
 	bool isValidInput;
 	string str;
 	string prompt;
+	string opChosen;
 
 public:
 
@@ -25,10 +26,13 @@ public:
 
 		if (choice == 1) {
 
+			
 			return first AND second;
 
 		}
 		else if (choice == 2) {
+
+
 
 			if ((first == 1 && second == 1)) {
 
@@ -40,6 +44,9 @@ public:
 			}
 		}
 		else if (choice == 3) {
+
+		
+
 
 			if (first != second) {
 
@@ -112,8 +119,23 @@ public:
 	
 		 counter = 1;
 		 prompt = "Row 1";
+
+		 if (choice == 1) {
+
+			 opChosen = "AND";
+
+		 }
+		 else if (choice == 2) {
+
+			 opChosen = "OR";
+
+		 }
+		 else if (choice == 3) {
+			 opChosen = "XOR";
+
+		}
 		
-		 cout << setw(30) <<"\nTruth Table" <<"\n";
+		 cout << setw(30) <<"\nTruth Table - " << opChosen <<"\n";
 		 cout << setw(25) <<"___________________________\n";
 
 		for (int i = 0; i < myList.size(); i++) {
